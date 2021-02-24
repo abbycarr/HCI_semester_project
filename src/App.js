@@ -9,8 +9,9 @@ function App() {
       <body>
         <Jumbotron fluid>
           <Container>
-            <h1>This is HCI project</h1>
-            <p>We can post our team assignnments and other work here</p>
+            <h1>This is our HCI project</h1>
+            <p>We can post our team assignnments and other work here!</p>
+            <p>(<i>pst- Don't worry. We'll update the description soon</i>)</p>
           </Container>
         </Jumbotron>
         <ListGroup>
@@ -44,31 +45,64 @@ function App() {
           </ListGroup.Item>
         </ListGroup>
         <div class="mt-5">
-        <Tab.Container id="left-tabs-example" defaultActiveKey="hw1">
-          <Row>
-            <Col sm={3}>
-              <Nav variant="pills" className="flex-column">
-                <Nav.Item>
-                  <Nav.Link eventKey="hw1">HW1</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="hw2">HW2</Nav.Link>
-                </Nav.Item>
-              </Nav>
-            </Col>
-            <Col sm={9}>
-              <Tab.Content>
-                <Tab.Pane eventKey="hw1">
+          <Tab.Container id="left-tabs-example" defaultActiveKey="hw1">
+            <Row>
+              <Col sm={3}>
+                <Nav variant="pills" className="flex-column">
+                  <Nav.Item>
+                    <Nav.Link eventKey="hw1">HW1</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="hw2" disabled>HW2</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item >
+                    <Nav.Link eventKey="hw3" disabled>HW3</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="hw4-1" disabled>HW4-P1</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="hw4-2" disabled>HW4-P2</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="hw5" disabled>HW5</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Col>
+              <Col sm={9}>
+                <Tab.Content>
+                  <Tab.Pane eventKey="hw1">
                     <h3>Team 1: Team Contract and Project Proposal</h3>
-                    <a href="ps2_text.pdf">Team</a>
-                </Tab.Pane>
-                <Tab.Pane eventKey="hw2">
-                  <p>This is where HW2 will be!</p>
-                </Tab.Pane>
-              </Tab.Content>
-            </Col>
-          </Row>
-        </Tab.Container>
+                    <p>
+                      This is an example link- it currently goes to&nbsp;
+                      <a rel="noreferrer" target="_blank" href="https://github.com/abbycarr/HCI_semester_project/">GitHub</a>
+                      .
+                    </p>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="hw2">
+                    <h3>Team 2: Requirements Analysis</h3>
+                    <p>This is where HW2 will be!</p>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="hw3">
+                    <h3>Team 3: Prototyping</h3>
+                    <p>This is where HW3 is gonna go!</p>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="hw4-1">
+                    <h3>Team 4: Interface Evaluation - Part 1</h3>
+                    <p>Look- HW4's Part 1 will appear here!</p>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="hw4-2">
+                    <h3>Team 4: Interface Evaluation - Part 2</h3>
+                    <p>... And Part 2 goes in this Tab!</p>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="hw5">
+                    <h3>Team 5: Final Project and Presentation</h3>
+                    <p>Last but not leaast, to be HW5!</p>
+                  </Tab.Pane>
+                </Tab.Content>
+              </Col>
+            </Row>
+          </Tab.Container>
         </div>
       </body>
     </div>
