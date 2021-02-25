@@ -9,9 +9,8 @@ function App() {
       <body>
         <Jumbotron fluid>
           <Container>
-            <h1>This is our HCI project</h1>
-            <p>We can post our team assignnments and other work here!</p>
-            <p>(<i>pst- Don't worry. We'll update the description soon</i>)</p>
+            <h1>This is our HCI project <i>(To be named)</i></h1>
+            <p>We propose a shared bulletin board specifically tailored towards specific neighborhoods or apartment complexes for example. Our user interface would be a web application that gives each user group a virtual bulletin board and the ability to post notes and flyers.</p>
           </Container>
         </Jumbotron>
         <ListGroup>
@@ -74,9 +73,9 @@ function App() {
                   <Tab.Pane eventKey="hw1">
                     <h3>Team 1: Team Contract and Project Proposal</h3>
                     <p>
-                      This is an example link- it currently goes to&nbsp;
-                      <a rel="noreferrer" target="_blank" href="https://github.com/abbycarr/HCI_semester_project/">GitHub</a>
-                      .
+                      Click&nbsp;
+                      <a rel="noreferrer" target="_blank" href="https://github.com/abbycarr/HCI_semester_project/blob/master/HW1/T1-NAH-Carr-Farhan-Suresh.pdf">Here</a>
+                      &nbsp; to view our Team Contract and Project Proposal.
                     </p>
                   </Tab.Pane>
                   <Tab.Pane eventKey="hw2">
