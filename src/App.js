@@ -9,8 +9,12 @@ function App() {
       <body>
         <Jumbotron fluid>
           <Container>
-            <h1>This is our HCI project <i>(To be named)</i></h1>
-            <p>We propose a shared bulletin board specifically tailored towards specific neighborhoods or apartment complexes for example. Our user interface would be a web application that gives each user group a virtual bulletin board and the ability to post notes and flyers.</p>
+            <h1>BulletinBoard</h1>
+            <p>Neighbors have had a harder time communicating with each other during the pandemic.
+            Communities that were already close-knit found it hard to social distance and maintain
+            their connections while neighbors who had not already connected felt more isolated than ever.
+            Although we cannot create that connection ourselves, we want to allow more fluid communication
+               between members of a community in the hopes that we can help them help each other</p>
           </Container>
         </Jumbotron>
         <ListGroup>
@@ -52,7 +56,7 @@ function App() {
                     <Nav.Link eventKey="hw1">HW1</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="hw2" disabled>HW2</Nav.Link>
+                    <Nav.Link eventKey="hw2" >HW2</Nav.Link>
                   </Nav.Item>
                   <Nav.Item >
                     <Nav.Link eventKey="hw3" disabled>HW3</Nav.Link>
@@ -80,7 +84,11 @@ function App() {
                   </Tab.Pane>
                   <Tab.Pane eventKey="hw2">
                     <h3>Team 2: Requirements Analysis</h3>
-                    <p>This is where HW2 will be!</p>
+                    <p>
+                      Click&nbsp;
+                      <a rel="noreferrer" target="_blank" href="https://github.com/abbycarr/HCI_semester_project/blob/master/HW2/T2-NAH-Carr-Farhan-Suresh.pdf">Here</a>
+                      &nbsp; to view our Requirements Analysis.
+                    </p>
                   </Tab.Pane>
                   <Tab.Pane eventKey="hw3">
                     <h3>Team 3: Prototyping</h3>
