@@ -59,7 +59,13 @@ function App() {
                     <Nav.Link eventKey="hw2" >HW2</Nav.Link>
                   </Nav.Item>
                   <Nav.Item >
-                    <Nav.Link eventKey="hw3" disabled>HW3</Nav.Link>
+                    <Nav.Link eventKey="hw3">HW3</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item >
+                    <Nav.Link eventKey="hw3v1">Version 1</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item >
+                    <Nav.Link eventKey="hw3v2">Version 2</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link eventKey="hw4-1" disabled>HW4-P1</Nav.Link>
@@ -92,7 +98,31 @@ function App() {
                   </Tab.Pane>
                   <Tab.Pane eventKey="hw3">
                     <h3>Team 3: Prototyping</h3>
-                    <p>This is where HW3 is gonna go!</p>
+                    <p>The Version 1 and Version 2 pages host our photos for the paper prototype and revised interface design respectively.</p>
+                    <p>
+                      Click&nbsp;
+                      <a rel="noreferrer" target="_blank" href="https://github.com/abbycarr/HCI_semester_project/blob/master/HW3/T3-NAH-Carr-Farhan-Suresh.pdf">Here</a>
+                      &nbsp; to view our Prototyping Deliverable.
+                    </p>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="hw3v1">
+                    <h3>Version 1</h3>
+                    <p>Below are photos from our Paper Prototype </p>
+                    <img width="500" src="https://github.com/abbycarr/HCI_semester_project/blob/master/HW3/Blank.JPG?raw=true" alt="Blank"></img>
+                    <img width="500" src="https://github.com/abbycarr/HCI_semester_project/blob/master/HW3/Components.JPG?raw=true" alt="Components"></img>
+                    <img width="500" src="https://github.com/abbycarr/HCI_semester_project/blob/master/HW3/Welcome%20Blank.JPG?raw=true" alt="Welcome Blank"></img>
+                    <img width="500" src="https://github.com/abbycarr/HCI_semester_project/blob/master/HW3/Welcome.JPG?raw=true" alt="Welcome"></img>
+                    <img width="500" src="https://github.com/abbycarr/HCI_semester_project/blob/master/HW3/Events.JPG?raw=true" alt="Events"></img>
+                    <img width="500" src="https://github.com/abbycarr/HCI_semester_project/blob/master/HW3/Advertise.JPG?raw=true" alt="Advertise"></img>
+                    <img width="500" src="https://github.com/abbycarr/HCI_semester_project/blob/master/HW3/Chat.JPG?raw=true" alt="Chat"></img>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="hw3v2">
+                    <h3>Version 2</h3>
+                    <p>Below are photos from our Revised Interface Design </p>
+                    <img width="500" src="https://github.com/abbycarr/HCI_semester_project/blob/master/HW3/Screen%20Shot%202021-03-15%20at%2011.27.03.png?raw=true" alt="Welcome Board"></img>
+                    <img width="500" src="https://github.com/abbycarr/HCI_semester_project/blob/master/HW3/Screen%20Shot%202021-03-15%20at%2011.27.08.png?raw=true" alt="Advertising Board"></img>
+                    <img width="500" src="https://github.com/abbycarr/HCI_semester_project/blob/master/HW3/Screen%20Shot%202021-03-15%20at%2011.27.12.png?raw=true" alt="Casual Chat Board"></img>
+                    <img width="500" src="https://github.com/abbycarr/HCI_semester_project/blob/master/HW3/Screen%20Shot%202021-03-15%20at%2011.27.15.png?raw=true" alt="Events Board"></img>
                   </Tab.Pane>
                   <Tab.Pane eventKey="hw4-1">
                     <h3>Team 4: Interface Evaluation - Part 1</h3>
