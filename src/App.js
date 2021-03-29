@@ -48,7 +48,7 @@ function App() {
           </ListGroup.Item>
         </ListGroup>
         <div class="mt-5">
-          <Tab.Container id="left-tabs-example" defaultActiveKey="hw1">
+          <Tab.Container id="left-tabs-example" defaultActiveKey="hw4-1">
             <Row>
               <Col sm={3}>
                 <Nav variant="pills" className="flex-column">
@@ -68,7 +68,7 @@ function App() {
                     <Nav.Link eventKey="hw3v2">Version 2</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="hw4-1" disabled>HW4-P1</Nav.Link>
+                    <Nav.Link eventKey="hw4-1">HW4-P1</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link eventKey="hw4-2" disabled>HW4-P2</Nav.Link>
@@ -126,7 +126,10 @@ function App() {
                   </Tab.Pane>
                   <Tab.Pane eventKey="hw4-1">
                     <h3>Team 4: Interface Evaluation - Part 1</h3>
-                    <p>Look- HW4's Part 1 will appear here!</p>
+                    <p>Click&nbsp;
+                      <a rel="noreferrer" target="_blank" href="https://github.com/abbycarr/HCI_semester_project/blob/master/HW4/T4-Part1-NAH-Carr-Farhan-Suresh.pdf">Here</a>
+                      &nbsp;to view our Interface Evaluation deliverable. It contains the evaluation instructions for our web application at&nbsp;
+                      <a rel="noreferrer" target="_blannk" href="bulletinboard.developinginteractions.com">bulletinboard.developinginteractions.com</a>.</p>
                   </Tab.Pane>
                   <Tab.Pane eventKey="hw4-2">
                     <h3>Team 4: Interface Evaluation - Part 2</h3>
