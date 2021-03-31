@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav class="navigation navbar-expand-lg bg-light navbar-light">
+        <!-- Fake Links (call javascript) -->
+        <ul class="me-auto mb-2 mb-lg-0">
+          <li class="links active"><a href="javascript:void(0)" onclick="loadDoc('in')"> Welcome!</a></li>
+          <li class="links"><a href="javascript:void(0)" onclick="loadDoc('ad')"> Advertising Board</a></li>
+          <li class="links"><a href="javascript:void(0)" onclick="loadDoc('ev')"> Events </a></li>
+          <li class="links"><a href="javascript:void(0)" onclick="loadDoc('ch')"> Casual Chat </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- The Board -->
+    <div class="container">
+      <img class="board" src="board.png" alt="board" width="100%"></img>
+      <div class="h1 title-top" id="title">Welcome Board</div>
+      <div class="top-right">
+        <button type="button" id="add" onclick="openForm()">
+          Add a Post</button>
+        <button type="button" id="upload" onclick="openUpload()">Upload a Post</button>
+        <button type="submit" id="delete" onclick="trashOption()">Delete one of your Posts</button>
+      </div>
+      <!-- Posting Areas- stored this way to account for the lack of a backend -->
+      <div class="post-it row top-left" id="post-area-in">
+        <div id="post-1" class="card cursor-pointer"> 
+        <div class="card-body">
+          <h5 class="card-title"> Welcome! </h5>
+          <div class="card-text"> This is your neighborhood bulletin board. </div>
+          <div>
+            <button class="trash" id="1" onclick="toTrash(-1)"> Delete </button>
+          </div>  
+        </div> 
+        </div>
+        <!---- Other Welcome board posts -->
+        <div id="post-2" class="card cursor-pointer"> 
+        <div class="card-body">
+          <h5 class="card-title"> Different Boards </h5>
+          <div class="card-text"> There are 3 different boards to choose from to communicate with your neighbors. This board is to help you navigate as well as test out some of the features! </div>
+          <div>
+            <button class="trash" id="1" onclick="toTrash(-2)"> Delete </button>
+          </div>  
+        </div> 
+        </div> 
+      </div>
+      <div class="post-it row" id="post-area-ad"></div>
+      <div class="post-it row" id="post-area-ch"></div>
+      <div class="post-it row top-left" id="post-area-ev">
+        
+        <div id="post-1" class="card cursor-pointer"> 
+          <div class="card-body">
+            <h5 class="card-title"> Backyard Barbecue </h5>
+            <div class="card-text"> At Sarah's house(123 HCI lane), remember to bring food if you are coming! </div>
+            <div class="card-subtitle mb-2 text-muted"> 4/12/2021 </div>
+            <button class="interested" id="interested-button-1" onclick="interested(-1)">Interested?</button>
+          </div>  
+        </div>
+
+        <div id="post-2" class="card cursor-pointer"> 
+          <div class="card-body">
+            <h5 class="card-title"> Community Garden </h5>
+            <div class="card-text"> Help us grow vegetables at plot 5 in the community garden! </div>
+            <div class="card-subtitle mb-2 text-muted"> 4/3/2021 </div>
+            <button class="interested" id="interested-button-2" onclick="interested(-2)">Interested?</button>
+          </div>  
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Upload Post Form -->
+    <!--div class="form-popup" id="uploadFormOriginal">
+      <form action="/action_page.php" class="form-container">
+        <form action="/action_page.php">
+        <label for="title">Title</label>
+        <input type="text" id="upload-title" name="title"><br><br>
+        <label for="post-text">Upload Image</label>
+        <form enctype="multipart/form-data" action="/upload/image" method="post">
+          <input id="image-file" type="file" />
+        </form>
+        </form>
+        <button type="submit" class="btn" onclick="upload()">Post</button>
+        <button type="button" class="btn cancel" onclick="closeUpload()">Cancel</button>
+      </form>
+    </div-->
+
+    <!-- Upload Post Form -->
+    <div class="form-popup" id="uploadForm">
+      <form action="/action_page.php" class="form-container">
+        <form action="/action_page.php">
+        <label for="title" id="upload-title">Upload an Image </label>
+      </form>
+        <form enctype="multipart/form-data" action="/upload/image" method="post">
+          <input id="image-file" type="file" />
+        </form>
+      <button type="submit" class="btn" onclick="upload()">Post</button>
+      <button type="button" class="btn" onclick="closeUpload()">Cancel</button>
+      </form>
+    </div>
+
+
+    <!-- Add a Post Form -->
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <form action="/action_page.php">
+        <label for="title">Title</label>
+        <input type="text" id="post-title" name="title"><br><br>
+        <label for="post-text">Text Here</label>
+        <input type="text" id="post" name="post-text"><br><br>
+        <label for="start" id="post-start-title" >Event date:</label>
+        <input type="date" id="post-start" name="event-start">
+      </form>
+      <button type="submit" class="btn" onclick="createPost()">Post</button>
+      <button type="button" class="btn" onclick="closeForm()">Discard</button>
+      </form>
+    </div>
+
+    <!-- Delete a Post Confirmation Pop-up -->
+    <div class="form-popup" id="deleteForm">
+      <form action="/action_page.php" class="form-container">
+        <form action="/action_page.php">
+        <label for="title">Are you sure you want to delete this post? </label>
+      </form>
+      <button type="submit" class="btn" id = "deleteButton" name = "deleteButton">Delete</button>
+      <button type="button" class="btn" onclick="closeDelete()">Cancel</button>
+      </form>
+    </div>
+
+    <!-- bootstrap! -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- javascript file! -->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
