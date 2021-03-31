@@ -127,7 +127,7 @@ function App() {
                   <Tab.Pane eventKey="hw4-1">
                     <h3>Team 4: Interface Evaluation - Part 1</h3>
                     <p>Click&nbsp;
-                      <a rel="noreferrer" target="_blank" href="https://github.com/abbycarr/HCI_semester_project/blob/master/HW4/T4-Part1-NAH-Carr-Farhan-Suresh.pdf">Here</a>
+                      <a rel="noreferrer" target="_blank" href="https://github.com/abbycarr/HCI_semester_project/blob/master/HW4/T4-NAH-Part1-Carr-Farhan-Suresh.pdf">Here</a>
                       &nbsp;to view our Interface Evaluation deliverable. It contains the evaluation instructions for our web application at&nbsp;
                       <a rel="noreferrer" target="_blank" href="https://bulletinboard.abbyccarr.repl.co/">bulletinboard.abbyccarr.repl.co/</a>.</p>
                   </Tab.Pane>
