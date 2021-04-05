@@ -48,7 +48,7 @@ function App() {
           </ListGroup.Item>
         </ListGroup>
         <div class="mt-5">
-          <Tab.Container id="left-tabs-example" defaultActiveKey="hw4-1">
+          <Tab.Container id="left-tabs-example" defaultActiveKey="hw4-2">
             <Row>
               <Col sm={3}>
                 <Nav variant="pills" className="flex-column">
@@ -71,7 +71,7 @@ function App() {
                     <Nav.Link eventKey="hw4-1">HW4-P1</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="hw4-2" disabled>HW4-P2</Nav.Link>
+                    <Nav.Link eventKey="hw4-2">HW4-P2</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link eventKey="hw5" disabled>HW5</Nav.Link>
@@ -133,7 +133,9 @@ function App() {
                   </Tab.Pane>
                   <Tab.Pane eventKey="hw4-2">
                     <h3>Team 4: Interface Evaluation - Part 2</h3>
-                    <p>... And Part 2 goes in this Tab!</p>
+                    <p>We evaluated <a rel="noreferrer" target="_blank" href="https://github.com/abbycarr/HCI_semester_project/blob/master/HW4/T4-Part-II-Playlists-NAH.pdf">Spotify Collaborative Playlists</a>
+                      &nbsp;and <a rel="noreferrer" target="_blank" href="https://github.com/abbycarr/HCI_semester_project/blob/master/HW4/T4-Part-II-PartnersPt.2-NAH.pdf">Partners Pt.2</a>
+                      &nbsp;for this step. Click to see our evaluations.</p>
                   </Tab.Pane>
                   <Tab.Pane eventKey="hw5">
                     <h3>Team 5: Final Project and Presentation</h3>
