@@ -1,0 +1,288 @@
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color:black;
+}
+
+.title-top {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: black;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  right: 20%;
+  color: black;
+}
+
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 39px;
+  font-size: 100%;
+}
+
+/* Top right text */
+.top-right {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 83%;
+  right: 10%;
+  width: 9.8%;
+  height: 10%;
+  font-size: 110%;
+}
+
+
+
+.flyer img{
+  position: absolute;
+  width: 20%;
+  top: 20%;
+  left: 20%;
+}
+
+
+/**** Button *****/
+button {
+  	border-radius: 5px;
+    margin: 5px;
+    border-color: darkgrey;
+}
+
+#delete {
+  background-color: #fc7060;
+}
+
+#add {
+  background-color: #40d68b;
+}
+
+#upload {
+  background-color: #f5d62a;
+}
+
+#edit {
+  background-color: #6baaf2;
+}
+
+/*** Navigation ***/
+.navigation {
+  font-family: 'Josefin Sans', sans-serif;
+	text-align: center;
+	padding: 0;
+	margin: 0 auto;
+	width: 100%;
+  font-size: 120%;
+}
+
+.navigation ul{
+  background-color:#f0f4f7;
+}
+
+.navigation li{
+	text-align: center;
+	margin: 5px;
+  padding-top: 0.5%;
+  padding-right: 3%;
+  padding-left: 3%;
+  border-right: 2px solid #a9a9a9;
+}
+
+#welcome {
+  border-left: 2px solid #a9a9a9;
+}
+
+.navigation a{
+	text-decoration: none;
+}
+
+.links a:visited{
+	color:rgb(0, 0, 0);
+}
+
+.links a:link{
+  color:rgb(0, 0, 0);
+}
+
+.links a:hover{
+	color:#808088;
+  text-decoration: none;
+}
+
+.links{
+	text-align: center;
+	display: inline-block;
+  color: black;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 33%;
+  left: 40%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  background-color: white;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 250px;
+  padding: 10px;
+  background-color: white;
+}
+
+#post1{
+  z-index: 1;
+  display: flex;
+  background-color: #89CFF0; 
+  flex: 1 1 auto;
+  width: 15rem; 
+  margin: 10px;
+  word-wrap: break-word;
+}
+
+#post2{
+  z-index: 1;
+  flex: 1 1 auto;
+  background-color: #ADD8E6; 
+  word-wrap: break-word;
+  width: 20rem; 
+  margin: 10px;
+} 
+#post3{
+  z-index: 1;
+  display: flex;
+  background-color: #89CFF0; 
+  flex: 1 1 auto;
+  width: 15rem; 
+  margin: 10px;
+  word-wrap: break-word;
+}
+
+#post4{
+  z-index: 1;
+  flex: 1 1 auto;
+  background-color: #ADD8E6; 
+  word-wrap: break-word;
+  width: 20rem; 
+  margin: 10px;
+} 
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 5px;
+  margin: 1px 0 1px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  color: black;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+}
+
+.trash {
+  display: none;
+}
+
+.edit {
+  display: none;
+}
+
+#post-start {
+  display: none;
+}
+
+#post-start-title {
+  display: none;
+}
+
+#post-area-ad {
+  opacity: 0;
+}
+
+#post-area-ev {
+  opacity: 0;
+}
+
+#post-area-ch {
+  opacity: 0;
+}
+
+#uploadForm {
+  width: 20%;
+  padding: 7px;
+}
+
+#upload-title {
+  padding-bottom: 3px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

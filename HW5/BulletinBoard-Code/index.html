@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav class="navigation navbar-expand-lg bg-light navbar-light">
+        <!-- Fake Links (call javascript) -->
+        <ul class="me-auto mb-2 mb-lg-0">
+          <li class="links"><a href="javascript:void(0)" onclick="loadDoc('in')"> Welcome!</a></li>
+          <li class="links"><a href="javascript:void(0)" onclick="loadDoc('ad')"> Advertising Board</a></li>
+          <li class="links"><a href="javascript:void(0)" onclick="loadDoc('ev')"> Events Board</a></li>
+          <li class="links"><a href="javascript:void(0)" onclick="loadDoc('ch')"> General Board </a></li>
+          <li class="links">
+            <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">See Your Neighboorhood Information
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <h5>Your Neighborhood</h5>
+    <p>Name: Sunny Villa<br/>Location: Boston, MA<br/><br/>BulletinBoard Members: 32<br>Online Now: 12</p>
+  </div>
+  </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- The Board -->
+    <div class="container">
+      <img class="board" id="boardimg" src="board.png" alt="board" width="100%"></img>
+      <div class="h1 title-top" id="title">Welcome Board</div>
+      <div class="top-right">
+        <button type="button" id="add" onclick="openForm()">
+          Add a Post</button>
+        <button type="button" id="upload" onclick="openUpload()">Upload an Image</button>
+        <button type="submit" id="delete" onclick="trashOption()">Delete one of your Posts</button>
+        <button type="submit" id="edit" onclick="editOption()">Edit one of your Posts</button>
+      </div>
+      <!-- Posting Areas- stored this way to account for the lack of a backend -->
+      <div class="post-it row top-left" id="post-area-in">
+        <div id="post1" class="card cursor-pointer"> 
+        <div class="card-body">
+          <h5 class="card-title"> Welcome! </h5>
+          <div class="card-text"> This is your neighborhood bulletin board. </div>
+          <div>
+            <button class="trash" id="1" onclick="toTrash(this.id)"> Delete </button>
+          </div>  
+        </div> 
+        </div>
+        <!---- Other Welcome board posts -->
+        <div id="post2" class="card cursor-pointer"> 
+        <div class="card-body">
+          <h5 class="card-title"> Different Boards </h5>
+          <div class="card-text"> There are 4 different boards to choose from to communicate with your neighbors. This board is to help you navigate as well as test out some of the features!<br> 
+          Advertising board is when you can post ads and see other ads. <br>
+          Events board allows you to post about events happning soon and find other neighborhood events you might be interested in. <br>
+          General board allows you to ask question and write statements to the rest of your neighbors.
+          </div>
+          <div>
+            <button class="trash" id="2" onclick="toTrash(2)"> Delete </button>
+          </div>  
+        </div> 
+        </div> 
+      </div>
+      <div class="post-it row" id="post-area-ad"></div>
+      <div class="post-it row" id="post-area-ch"></div>
+      <div class="post-it row top-left" id="post-area-ev">
+        
+        <div id="post3" class="card cursor-pointer"> 
+          <div class="card-body">
+            <h5 class="card-title"> Backyard Barbecue </h5>
+            <div class="card-text"> At Sarah's house(123 HCI lane), remember to bring food if you are coming! </div>
+            <div class="card-subtitle mb-2 text-muted"> 5/17/2021 </div>
+            <div class="card-subtitle mb-2 text-muted"> 12:00 PM </div>
+            <div class="p">
+              <a id="calLink" target="_blank" class="calL" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Backyard+Barbecue&details=At+Sarah%27s+house%28123+HCI+lane%29%2C+remember+to+bring+food+if+you+are+coming%21&location=In+your+neighborhood&dates=20210517T160000Z%2F20210517T200000Z">Add to Google Calendar</a> 
+            </div>
+          </div>  
+        </div>
+
+        <div id="post4" class="card cursor-pointer"> 
+          <div class="card-body">
+            <h5 class="card-title"> Community Garden </h5>
+            <div class="card-text"> Help us grow vegetables at plot 5 in the community garden! </div>
+            <div class="card-subtitle mb-2 text-muted"> 5/3/2021 </div>
+            <div class="card-subtitle mb-2 text-muted"> 10:15 AM </div>
+            <div class="p">
+              <a id="calLink" target="_blank" class="calL" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Community+Garden&details=Help+us+grow+vegetables+at+plot+5+in+the+community+garden%21&location=In+your+neighborhood&dates=20210503T143000Z%2F20210503T171500Z">Add to Google Calendar</a> 
+            </div>
+          </div>  
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Upload Post Form -->
+    <div class="form-popup" id="uploadForm">
+      <form action="/action_page.php" class="form-container">
+        <form action="/action_page.php">
+        <label for="title" id="upload-title">Upload an Image </label>
+      </form>
+        <form enctype="multipart/form-data" action="/upload/image" method="post">
+          <input id="image-file" type="file" />
+        </form>
+      <button type="submit" class="btn" onclick="upload()">Post</button>
+      <button type="button" class="btn" onclick="closeUpload()">Discard</button>
+      </form>
+    </div>
+
+
+    <!-- Add a Post Form -->
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <form action="/action_page.php">
+        <label for="title">Title</label>
+        <input type="text" id="post-title" name="title"><br><br>
+        <label for="post-text">Text Here</label>
+        <input type="text" id="post" name="post-text"><br><br>
+        <label for="start" id="post-start-title" >Event date:</label>
+        <input type="date" id="post-start" name="event-start">
+        <input type="time" id="post-time" name="event-time">
+        </form>
+      <button type="submit" class="btn" onclick="createPost()">Post</button>
+      <button type="button" class="btn" onclick="closeForm()">Discard</button>
+      </form>
+    </div>
+
+    <!-- Add a Edit Form -->
+    <div class="form-popup" id="editForm">
+      <form action="/action_page.php" class="form-container">
+        <form action="/action_page.php">
+        <label for="title">Title</label>
+        <input type="text" id="edit-title" name="title"><br><br>
+        <label for="text">Text Here</label>
+        <input type="text" id="edit-post" name="post-text"><br><br>
+        </form>
+      <button type="submit" class="btn" id= "editButton" name="editButton">Post Edit</button>
+      <button type="button" class="btn" onclick="closeEdit()">Discard</button>
+      </form>
+    </div>
+
+    <!-- Delete a Post Confirmation Pop-up -->
+    <div class="form-popup" id="deleteForm">
+      <form action="/action_page.php" class="form-container">
+        <form action="/action_page.php">
+        <label for="title">Are you sure you want to delete this post? </label>
+      </form>
+      <button type="submit" class="btn" id = "deleteButton" name = "deleteButton">Delete</button>
+      <button type="button" class="btn" onclick="closeDelete()">Close</button>
+      </form>
+    </div>
+
+    <!-- bootstrap! -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- javascript file! -->
+    <script type="text/javascript" src="script.js"></script>
+    <!-- Start the Website?? -->
+    <script>loadDoc("in")</script>
+  </body>
+</html>

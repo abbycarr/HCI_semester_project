@@ -48,7 +48,7 @@ function App() {
           </ListGroup.Item>
         </ListGroup>
         <div class="mt-5">
-          <Tab.Container id="left-tabs-example" defaultActiveKey="hw4-2">
+          <Tab.Container id="left-tabs-example" defaultActiveKey="hw5">
             <Row>
               <Col sm={3}>
                 <Nav variant="pills" className="flex-column">
@@ -74,7 +74,7 @@ function App() {
                     <Nav.Link eventKey="hw4-2">HW4-P2</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="hw5" disabled>HW5</Nav.Link>
+                    <Nav.Link eventKey="hw5">HW5</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Col>
@@ -139,7 +139,12 @@ function App() {
                   </Tab.Pane>
                   <Tab.Pane eventKey="hw5">
                     <h3>Team 5: Final Project and Presentation</h3>
-                    <p>Last but not leaast, to be HW5!</p>
+                    <p>View our web application code&nbsp;
+                      <a rel="noreferrer" target="_blank" href="https://github.com/abbycarr/HCI_semester_project/blob/master/HW5/BulletinBoard-Code">here</a>.</p>
+                    <p>Access our powerpoint presentation&nbsp;
+                      <a rel="noreferrer" target="_blank" href="https://github.com/abbycarr/HCI_semester_project/blob/master/HW5/T5-NAH-Carr-Farhan-Suresh.pptx">here</a>.</p>
+                    <p>Access our report&nbsp;
+                      <a rel="noreferrer" target="_blank" href="https://github.com/abbycarr/HCI_semester_project/blob/master/HW5/T5-NAH-Carr-Farhan-Suresh.pdf">here</a>.</p>
                   </Tab.Pane>
                 </Tab.Content>
               </Col>
